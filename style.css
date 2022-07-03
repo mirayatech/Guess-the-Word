@@ -58,6 +58,22 @@ body {
 }
 
 .details p {
-  font-size: calc(19 / 16 * 1rem);
+  font-weight: 500;
+  font-size: calc(18 / 16 * 1rem);
   margin-bottom: 10px;
+}
+.details span {
+  font-weight: 400;
+}
+
+.content .reset-btn {
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: calc(17 / 16 * 1rem);
+  padding: 15px 0;
+  background: #4285f4;
+  border-radius: 5px;
 }
