@@ -31,3 +31,33 @@ body {
 .wrapper .content {
   margin: 25px 25px 35px;
 }
+
+.content .inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inputs input {
+  height: 57px;
+  width: 56px;
+  margin: 4px;
+  font-size: calc(24 / 16 * 1rem);
+  font-weight: 500;
+  background: none;
+  border-radius: 5px;
+  border: 1px solid #b5b5b5;
+}
+
+.inputs input:first-child {
+  margin-left: 0;
+}
+
+.content .details {
+  margin: 20px 0 25px;
+}
+
+.details p {
+  font-size: calc(19 / 16 * 1rem);
+  margin-bottom: 10px;
+}
