@@ -39,6 +39,8 @@ body {
 }
 
 .inputs input {
+  text-align: center;
+  color: #4285f4;
   height: 57px;
   width: 56px;
   margin: 4px;
