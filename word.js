@@ -8,8 +8,8 @@ const wordList = [
         hint: "a musical instrument"
     },
     {
-        word: "purpose or intention",
-        hint: "aim"
+        word: "aim",
+        hint: "purpose or intention"
     },
     {
         word: "saturn",
