@@ -16,7 +16,7 @@ body {
 }
 
 .wrapper {
-  width: 430px;
+  width: 450px;
   background: #fff;
   border-radius: 10px;
 }
@@ -91,3 +91,17 @@ body {
 .content .reset-btn:hover {
   transform: scale(0.98);
 }
+
+#author {
+  width: 100%;
+  font-size: 1.1rem;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding: 25px 0;
+}
+
+#author a {
+  color: #4285f4;
+}
+
+
