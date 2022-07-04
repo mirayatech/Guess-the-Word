@@ -76,4 +76,9 @@ body {
   padding: 15px 0;
   background: #4285f4;
   border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.content .reset-btn:hover {
+  transform: scale(0.98);
 }
