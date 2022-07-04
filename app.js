@@ -1,12 +1,16 @@
 const inputs = document.querySelector('.inputs')
 const resetButton = document.querySelector('.reset-btn')
 const hint = document.querySelector('.hint span')
+const wrongLetter = document.querySelector('.wrong-letter span')
 const typingInput = document.querySelector('.typing-input')
 let word;
+let correctLetters = []
+let incorrectLetters = []
 
 function randomWord() {
+    // getting random object form wordList
     let randomObject = wordList[Math.floor(Math.random() * wordList.length)]
-    word = randomObject.word;
+    word = randomObject.word; // getting word of random object
     hint.innerText = randomObject.hint
 
     console.log(word)
@@ -23,25 +27,22 @@ randomWord()
 
 function initGame(e) {
     let key = e.target.value.toLowerCase();
-
-    if (key.match(/^[A-Za-z]+$/)) {
-        console.log(key)
-
-        if (word.includes(key)) { // if user found in the word
-
+    if (key.match(/^[A-Za-z]+$/) && !incorrectLetters.includes(` ${key}`) && !correctLetters.includes(key)) {
+        if (word.includes(key)) { //if user letter found in the word
             for (let i = 0; i < word.length; i++) {
-                // showing matching letter in input
-                if (word[i] === key) {
-                    inputs.querySelectorAll('input')[i].value = key
+                // showing matched letter in the input value
+                if (word[i] == key) {
+                    correctLetters += key;
+                    inputs.querySelectorAll("input")[i].value = key;
                 }
             }
-
         } else {
-            console.log('letter not found')
+            incorrectLetters.push(` ${key}`);
         }
-
+        wrongLetter.innerText = incorrectLetters;
     }
-    typingInput.value = ""
+    typingInput.value = "";
+
 }
 
 resetButton.addEventListener('click', randomWord)
