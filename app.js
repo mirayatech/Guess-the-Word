@@ -34,7 +34,6 @@ function initGame(e) {
                 if (word[i] === key) {
                     inputs.querySelectorAll('input')[i].value = key
                 }
-
             }
 
         } else {
@@ -42,6 +41,7 @@ function initGame(e) {
         }
 
     }
+    typingInput.value = ""
 }
 
 resetButton.addEventListener('click', randomWord)
