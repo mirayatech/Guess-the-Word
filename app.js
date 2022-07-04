@@ -1,9 +1,11 @@
 const inputs = document.querySelector('.inputs')
 const resetButton = document.querySelector('.reset-btn')
 const hint = document.querySelector('.hint span')
+const guessLeft = document.querySelector('.guess-left span')
 const wrongLetter = document.querySelector('.wrong-letter span')
 const typingInput = document.querySelector('.typing-input')
 let word;
+let maxGuesses;
 let correctLetters = []
 let incorrectLetters = []
 
@@ -11,7 +13,10 @@ function randomWord() {
     // getting random object form wordList
     let randomObject = wordList[Math.floor(Math.random() * wordList.length)]
     word = randomObject.word; // getting word of random object
+    maxGuesses = 8;
     hint.innerText = randomObject.hint
+    guessLeft.innerText = maxGuesses;
+
 
     console.log(word)
 
@@ -37,11 +42,18 @@ function initGame(e) {
                 }
             }
         } else {
+            maxGuesses--;
             incorrectLetters.push(` ${key}`);
         }
-        wrongLetter.innerText = incorrectLetters;
+        guessLeft.innerText = maxGuesses
+        wrongLetter.innerText = incorrectLetters
     }
+    wrongLetter.innerText = incorrectLetters;
     typingInput.value = "";
+
+    if (maxGuesses < 1) {
+        alert("Game over! You don't have remaining guesses")
+    }
 
 }
 
