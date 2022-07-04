@@ -52,7 +52,7 @@ function initGame(e) {
     typingInput.value = "";
 
     if (maxGuesses < 1) {
-        alert("Game over! You don't have remaining guesses")
+        alert("Game over! You don't have remaining guesses.")
     }
 
 }
