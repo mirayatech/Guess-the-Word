@@ -14,8 +14,11 @@ function randomWord() {
     let randomObject = wordList[Math.floor(Math.random() * wordList.length)]
     word = randomObject.word; // getting word of random object
     maxGuesses = 8;
+    correctLetters = []
+    incorrectLetters = []
     hint.innerText = randomObject.hint
     guessLeft.innerText = maxGuesses;
+    wrongLetter.innerText = incorrectLetters
 
 
     console.log(word)
@@ -53,6 +56,11 @@ function initGame(e) {
 
     if (maxGuesses < 1) {
         alert("Game over! You don't have remaining guesses.")
+        for (let i = 0; i < word.length; i++) {
+
+            inputs.querySelectorAll("input")[i].value = word[i];
+
+        }
     }
 
 }
