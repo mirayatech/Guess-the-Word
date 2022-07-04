@@ -13,3 +13,7 @@ The word guessing game is a task that which the player has to find all letters o
 ## How it looks 👀
 
 <strong>Live Demo: </strong> https://guesstheword-blue.netlify.app/ 
+
+
+https://user-images.githubusercontent.com/71933266/177188350-cf3691f2-f1cb-44ea-8928-fbb853ec65b8.MP4
+
