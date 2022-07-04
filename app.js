@@ -23,10 +23,20 @@ randomWord()
 
 function initGame(e) {
     let key = e.target.value.toLowerCase();
+
     if (key.match(/^[A-Za-z]+$/)) {
         console.log(key)
-        if (word.includes(key)) {
-            console.log('letter found')
+
+        if (word.includes(key)) { // if user found in the word
+
+            for (let i = 0; i < word.length; i++) {
+                // showing matching letter in input
+                if (word[i] === key) {
+                    inputs.querySelectorAll('input')[i].value = key
+                }
+
+            }
+
         } else {
             console.log('letter not found')
         }
